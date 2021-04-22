@@ -60,6 +60,7 @@ let passengerDropoffZip = ride.dropoffLocation.zip
 // Display passenger dropoff location 
 console.log(`Their dropoff location will be ${passengerDropoffAddress} ${passengerDropoffCity} ${passengerDropoffState} ${passengerDropoffZip}.`)
 
+
 // Define purple service 
 let passengerPurpleRequested = ride.purpleRequested
 
@@ -71,6 +72,8 @@ let passengerPurpleRequested = ride.purpleRequested
 // Define car size request 
 let passengerCarSize = ride.numberOfPassengers
 
+// Display number of passengers
+console.log(`There will be ${passengerCarSize} passenger(s) in this ride.`) 
 
 // conditional logic for car selection 
 if (passengerCarSize > 3 && passengerPurpleRequested == false) {
