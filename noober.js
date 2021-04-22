@@ -76,13 +76,20 @@ let passengerCarSize = ride.numberOfPassengers
 console.log(`There will be ${passengerCarSize} passenger(s) in this ride.`) 
 
 // conditional logic for car selection 
+// If XL is needed and Purple is not requested, make the service XL   
 if (passengerCarSize > 3 && passengerPurpleRequested == false) {
   console.log(`Level of Service = Noober XL Service`)
-} else if (passengerCarSize > 3 && passengerPurpleRequested == true) {
+} 
+// If XL is needed and Purple is also requested, Purple overrides XL  
+else if (passengerCarSize > 3 && passengerPurpleRequested == true) {
   console.log (`Level of Service = Noober Purple`)
-} else if (passengerCarSize <= 3 && passengerPurpleRequested == true) {
+} 
+// If XL is not needed and Purple is requested, make the service Noober Purple  
+else if (passengerCarSize <= 3 && passengerPurpleRequested == true) {
   console.log(`Level of Service = Noober Purple`)
-} else {
+} 
+// If XL is not needed and Purple is not requested, make the service Noober X
+else {
   console.log(`Level of Service = Noober X`)
 }
 
